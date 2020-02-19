@@ -1,0 +1,40 @@
+@import '../../../style/variables';
+@import '../../../style/breakpoints';
+
+.tab {
+  display: inline-flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #99a1ab;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 2px 12px 0 12px;
+  cursor: pointer;
+  outline: 0;
+  &.activeTab, &:hover {
+    transition-duration: 0ms;
+    color: #ff4081;
+  }
+  &:hover > .icon {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(33%) saturate(3802%) hue-rotate(318deg) brightness(105%) contrast(102%);
+  }
+  .icon{
+    width: 24px;
+    margin-top: 2px;
+    margin-right: 12px;
+    display: inline-flex;
+    filter: invert(68%) sepia(21%) saturate(156%) hue-rotate(173deg) brightness(92%) contrast(80%);
+    &.activeIcon,  {
+      filter: brightness(0) saturate(100%) invert(37%) sepia(33%) saturate(3802%) hue-rotate(318deg) brightness(105%) contrast(102%);
+    }
+  }
+  p {
+    margin-top: 2px;
+    display: inline-flex;
+  }
+
+}
+
+
