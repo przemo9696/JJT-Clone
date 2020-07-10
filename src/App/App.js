@@ -8,7 +8,6 @@ import {
 import './style/style.scss';
 import style from './app.module.scss';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 import AboutUs from './views/AboutUs/AboutUs';
 import Contact from './views/Contact/Contact';
 import SkiCams from './views/SkiCams/SkiCams';
@@ -20,9 +19,9 @@ const App = () => (
     <BrowserRouter>
       <Header />
       <Switch>
-        <Redirect from="/" exact to="/home" />
+
         <Route
-          path="/home"
+          path="/"
           component={Home}
           exact
         />
@@ -40,6 +39,11 @@ const App = () => (
           path="/ski-cams"
           component={SkiCams}
           exact
+        />
+        <Route
+        path="/add-offer/"
+        //component={AddOffer}
+        exact
         />
       </Switch>
     </BrowserRouter>

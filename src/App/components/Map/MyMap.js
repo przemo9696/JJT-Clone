@@ -1,6 +1,5 @@
 import React from 'react';
 import {Map, Marker, Popup, TileLayer} from "react-leaflet";
-import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import styles from '../../components/Map/map.module.scss';
 
@@ -10,13 +9,16 @@ export const MyMap = () => {
       id={styles.myMap}
       center={[51.91, 19.14]}
       zoom={6}
+      zoomControl={false}
       position="relative"
+      attributionControl={false}
     >
 
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
+
     </Map>
   )
 }

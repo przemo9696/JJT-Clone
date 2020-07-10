@@ -5,7 +5,7 @@ import jjtLogo from "../../../assets/images/jjt-logo2.png";
 
 export const Logo = () => {
   return(
-  <Link to='/home' className={styles.logo}>
+  <Link to='/' className={styles.logo}>
     <div className={styles.headerLogo}>
       <img src={jjtLogo} alt="jjt logo"/>
     </div>
