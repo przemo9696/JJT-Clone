@@ -16,6 +16,7 @@
   -moz-box-align: center;
   align-items: center;
   */
+  outline: 0;
   border-radius: 18px;
   text-transform: none;
   text-decoration: none;
@@ -26,6 +27,21 @@
   &:hover {
     background-color: rgba(0, 0, 0, 0.04);
   }
+}
+
+.activeLocFilters{
+  outline: 0;
+  border-radius: 18px;
+  text-transform: none;
+  text-decoration: none;
+  font-weight: 400;
+  color: rgb(119, 119, 119);
+  background: rgb(255, 255, 100) none repeat scroll 0% 0%;
+  border: 1px solid rgb(228, 232, 240);
+  &:hover {
+    background-color: red;
+  }
+
 }
 
 .locLabel{

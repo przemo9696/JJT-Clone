@@ -48,10 +48,11 @@ const Locations = ({to, loc, isLocationActive}) => (
   </div>
 );
 
-const LocationsFilter = () => {
+const LocationsFilter = ({location}) => {
 
-  const isLocationActive = destination => window.location.pathname === destination;
-  console.log(isLocationActive());
+  const isLocationActive = (destination) => location.pathname === destination;
+
+  const [isActive, setIsActive] = useState(null);
 
   return (
     <div className={styles.locFilters}>

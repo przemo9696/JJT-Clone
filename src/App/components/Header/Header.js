@@ -6,7 +6,6 @@ import Tab from './Tab/Tab';
 import briefcase from '../../assets/icons/briefcase.svg';
 import buisness from '../../assets/icons/buisness.svg';
 import newspapper from '../../assets/icons/newspaper.svg';
-import menu from '../../assets/icons/menu.svg';
 import Logo from '../../components/Header/Logo/Logo.js';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -39,6 +38,7 @@ const tabs = [
 const Header = ({location}) => {
 
   const isActive = (destination) => location.pathname === destination;
+
 
   const toggleSidebar = () => {
     return (

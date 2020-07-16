@@ -1,9 +1,10 @@
 .homeWrapper {
   display: flex;
-  align-self: stretch;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
+  height: 100%;
 
 
   .filterContainer {
@@ -44,20 +45,20 @@
     flex-basis: 0;
   }
 
+  .offers{
+    display: flex;
+    flex: 1 1 0;
+    height: 100%;
+  }
+
   .sidebarOffers {
-    //background-color: #f3f6f8;
-    width: 60%;
-    height: calc(100% - 126px);
-    //min-width: 600px;
+    display: flex;
+    flex: 0 0 60%;
   }
 
   .mapOffers {
-    width: 40%;
-    background-color: blue;
-    float: right;
-    height: calc(100% - 126px);
-    position: relative;
-    // haxy
+    display: flex;
+    flex: 0 0 40%;
   }
 
 }

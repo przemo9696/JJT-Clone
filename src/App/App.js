@@ -17,9 +17,7 @@ import Home from './views/Home/Home';
 const App = () => (
   <div className={style.root}>
     <BrowserRouter>
-      <Header />
       <Switch>
-
         <Route
           path="/"
           component={Home}
@@ -45,9 +43,12 @@ const App = () => (
         //component={AddOffer}
         exact
         />
+        <Route
+          path="/:location"
+          component={Home}
+        />
       </Switch>
     </BrowserRouter>
-
   </div>
 );
 
