@@ -1,74 +1,75 @@
-import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, withRouter } from "react-router-dom";
 import styles from "../../../views/Home/Filters/filters.module.scss";
 
 const locFilters = [
   {
-    to: '/warszawa',
-    loc: 'Warszawa',
+    to: "/warszawa",
+    loc: "Warszawa",
     map: {},
   },
   {
-    to: '/krakow',
-    loc: 'Kraków',
-    map: {}
-  },
-  {
-    to: '/wroclaw',
-    loc: 'Wrocław',
+    to: "/krakow",
+    loc: "Kraków",
     map: {},
   },
   {
-    to: '/poznan',
-    loc: 'Poznań',
+    to: "/wroclaw",
+    loc: "Wrocław",
     map: {},
   },
   {
-    to: '/trojmiasto',
-    loc: 'Trójmiasto',
+    to: "/poznan",
+    loc: "Poznań",
     map: {},
   },
   {
-    to: '/remote',
-    loc: 'Remote',
+    to: "/trojmiasto",
+    loc: "Trójmiasto",
     map: {},
   },
   {
-    to: '/world',
-    loc: 'World',
+    to: "/remote",
+    loc: "Remote",
+    map: {},
+  },
+  {
+    to: "/world",
+    loc: "World",
     map: {},
   },
 ];
 
-const Locations = ({to, loc, isLocationActive}) => (
+const Locations = ({ to, loc, isLocationActive }) => (
   <div className={styles.locFilters}>
-    <Link to={to} className={`${styles.locFilter} ${isLocationActive ? styles.activeLocFilters : ''}`}>
+    <Link
+      to={to}
+      className={`${styles.locFilter} ${
+        isLocationActive ? styles.activeLocFilters : ""
+      }`}
+    >
       <div className={styles.locLabel}>{loc} </div>
     </Link>
   </div>
 );
 
-const LocationsFilter = ({location}) => {
-
+const LocationsFilter = ({ location }) => {
   const isLocationActive = (destination) => location.pathname === destination;
 
   const [isActive, setIsActive] = useState(null);
 
   return (
     <div className={styles.locFilters}>
-      {
-        locFilters.map(({to, loc}) => (
-          <Locations
-            key={to}
-            to={to}
-            loc={loc}
-            isLocationActive={isLocationActive(to)}
-          />
-        ))
-      }
+      {locFilters.map(({ to, loc }) => (
+        <Locations
+          key={to}
+          to={to}
+          loc={loc}
+          isLocationActive={isLocationActive(to)}
+        />
+      ))}
     </div>
   );
 };
-
 
 export default withRouter(LocationsFilter);
