@@ -17,14 +17,16 @@ const OfferTile = (props) => {
   return (
     <div className={styles.offerTile}>
       <div className={`${styles.techColorContainer} ${technologyColor}`}></div>
-      <div className={styles.logoContainer}>{props.logo}</div>
+      <div className={styles.logoWrapper}>
+        <div className={styles.logoContainer}>:)</div>
+      </div>
       <div className={styles.offerInfoContainer}>
         <div className={styles.offerInfo_top}>
           <div className={styles.jobTitleContainer}>
             <div className={styles.jobTitle}>Junior Front-End Developer</div>
           </div>
           <div className={styles.jobSalaryContainer}>
-            <span className={styles.jobSalary}>3 500 - 4 500</span>
+            <span className={styles.jobSalary}>3 500 - 4 500 PLN</span>
             <div className={styles.releaseTime}>New</div>
           </div>
         </div>

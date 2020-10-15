@@ -10,8 +10,19 @@
   color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   overflow: auto;
-  .logoContainer {
+  .logoWrapper {
     flex-basis: 125px;
+    .logoContainer {
+      height: 85%;
+      width: 80%;
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+      background-color: rgb(255, 255, 255);
+      border-radius: 6px;
+    }
   }
   .techColorContainer {
     flex-basis: 5px;

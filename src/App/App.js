@@ -15,7 +15,20 @@ const App = () => (
         <Route path="/" component={Home} exact />
         <Route path="/about-us" component={AboutUs} exact />
         <Route path="/contact" component={Contact} exact />
-        <Route path="/ski-cams" component={SkiCams} exact />
+        <Route
+          path="/geek"
+          component={() => {
+            window.location.href = "https://geek.justjoin.it/";
+            return null;
+          }}
+        />
+        <Route
+          path="/brands"
+          component={() => {
+            window.location.href = "https://justjoin.it/brands";
+            return null;
+          }}
+        />
         <Route
           path="/add-offer/"
           //component={AddOffer}

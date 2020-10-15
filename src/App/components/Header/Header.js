@@ -17,12 +17,12 @@ const tabs = [
     icon: briefcase,
   },
   {
-    to: "/ski-cams",
-    text: "Brand Stories",
+    to: "/brands",
+    text: "Brands",
     icon: buisness,
   },
   {
-    to: "/contact",
+    to: "/geek",
     text: "Just Geek IT",
     icon: newspapper,
   },
