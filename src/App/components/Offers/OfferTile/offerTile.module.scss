@@ -17,7 +17,95 @@
     flex-basis: 5px;
     flex-shrink: 0;
   }
-  .offerInfo {
+  .offerInfoContainer {
+    display: flex;
+    -moz-box-flex: 1;
+    flex-grow: 1;
+    min-width: 0px;
+    padding: 8px 20px 8px 0px;
+    flex-direction: column;
+    .offerInfo_top {
+      display: flex;
+      flex-direction: row;
+      -moz-box-align: center;
+      align-items: center;
+      color: rgb(55, 71, 79);
+      -moz-box-align: stretch;
+      justify-content: space-between;
+      -moz-box-flex: 1;
+      flex-grow: 1;
+    }
+    .jobTitleContainer {
+      display: flex;
+      align-items: flex-start;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+      -moz-box-flex: 1;
+      flex-grow: 1;
+      min-width: 0px;
+      .jobTitle {
+        padding-right: 8px;
+        line-height: 20px;
+        font-weight: 600;
+        overflow: hidden;
+        -moz-box-orient: vertical;
+        display: block;
+        margin-top: 0px;
+        padding-right: 5px;
+        font-size: 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: none;
+      }
+    }
+    .jobSalaryContainer {
+      display: flex;
+      -moz-box-pack: end;
+      justify-content: flex-end;
+      -moz-box-align: center;
+      align-items: center;
+      .jobSalary {
+        font-size: 16px;
+        color: rgb(30, 198, 108);
+        line-height: 23px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .releaseTime {
+        height: 22px;
+        padding: 0px 7px;
+        margin-left: 16px;
+        font-size: 11px;
+        line-height: 20px;
+        white-space: nowrap;
+        border-radius: 11px;
+        color: rgb(66, 86, 239);
+        border: 1px solid rgb(217, 221, 252);
+        background-color: rgb(217, 221, 252);
+      }
+    }
+    .offerInfo_bottom {
+      display: flex;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+    }
+    .companyDetails {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      color: rgb(153, 161, 171);
+      font-size: 11px;
+    }
+    .techDetails {
+      display: flex;
+      flex: 1 1 0%;
+      white-space: nowrap;
+      -moz-box-pack: end;
+      justify-content: flex-end;
+      align-items: flex-end;
+      overflow: hidden;
+    }
   }
 }
 
