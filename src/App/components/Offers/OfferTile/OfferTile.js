@@ -9,6 +9,22 @@ const OfferTile = (props) => {
       technologyColor = styles.javaScript;
       break;
     }
+    case "HTML": {
+      technologyColor = styles.html;
+      break;
+    }
+    case "PHP": {
+      technologyColor = styles.php;
+      break;
+    }
+    case "Ruby": {
+      technologyColor = styles.ruby;
+      break;
+    }
+    case "Python": {
+      technologyColor = styles.python;
+      break;
+    }
 
     default:
       console.log("error");
@@ -32,7 +48,9 @@ const OfferTile = (props) => {
         </div>
         <div className={styles.offerInfo_bottom}>
           <div className={styles.companyDetails}>Company</div>
-          <div className={styles.techDetails}>JavaScript</div>
+          <div className={styles.techDetails}>
+            {props.technology.toLowerCase()}
+          </div>
         </div>
       </div>
     </div>

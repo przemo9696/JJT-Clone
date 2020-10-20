@@ -3,15 +3,36 @@ import styles from "./offers.module.scss";
 import OfferTile from "../../components/Offers/OfferTile/OfferTile";
 
 const Offers = () => {
-  const jobOffers = [1, 2, 3];
+  const jobOffers = [
+    {
+      companyName: "",
+      companyType: "",
+      companyWebsite: "",
+      companySize: "",
+      companyIndustry: "",
+      title: "",
+      experienceLevel: "",
+      employmentType: "",
+      salaryFrom: "",
+      salaryTo: "",
+      currency: "",
+      onlineRecruitment: false,
+      mainTechnology: "",
+      technologies: [{ techName: "", techLevel: 0 }],
+      jobDescription: "",
+      locationCity: "",
+      locationStreet: "",
+      isRemote: false,
+      logo: "",
+      publicationDate: "",
+    },
+  ];
 
   return (
     <div className={styles.sidebarOffers}>
       <ul>
-        {jobOffers.map((x) => (
-          <li>{x}</li>
-        ))}
         <OfferTile technology="JavaScript" />
+        <OfferTile technology="PHP" />
       </ul>
     </div>
   );
